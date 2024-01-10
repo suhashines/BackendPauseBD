@@ -1,0 +1,49 @@
+----- new product insertion in Products collection------
+
+async function run(){
+
+    let category = await Category.findOne({ name: 'Hoodie' }) ;
+
+    let collection = await Collection.findOne({name:'Text Me When You Get Home'});
+
+    const newProduct = new Product({
+        name: 'Be Safe', // Replace with the actual product name
+        category: category._id, // Reference to the found category
+        collection: collection._id, // Reference to the found collection
+        colors: [
+          {
+            name: 'blue' ,
+            sizes: [
+              { size: 'S', inStock: 10 },
+              { size: 'M', inStock: 15 },
+              { size: 'L', inStock: 8 },
+            ],
+            frontImage: [img1] ,
+            backImage: [img2]
+          },
+          // Add more colors as needed
+          {
+              name: 'brown',
+              sizes: [
+                { size: 'S', inStock: 10 },
+                { size: 'M', inStock: 15 },
+                { size: 'L', inStock: 8 },
+              ],
+              frontImage: [img3,img4],
+              backImage: [img5]
+            }
+        ],
+        price: 29.99,
+        discount: 5,
+        description : "Your perfect fit",
+        type : "Graphic"
+        // Add other product properties as needed
+      });
+
+      await newProduct.save();
+}
+
+
+important git command
+--- git pull origin main
+--- git push -u origin main
