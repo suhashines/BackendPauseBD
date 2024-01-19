@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const dotenv = require("dotenv");
-const result = dotenv.config();
+// const result = dotenv.config();
 
-// if (result.error) {
-//   throw result.error;
-// }
+// // if (result.error) {
+// //   throw result.error;
+// // }
 
-const envVars = result.parsed;
-Object.assign(process.env, envVars);
+// const envVars = result.parsed;
+// Object.assign(process.env, envVars);
 
 const db = process.env.db_name ;
 const username = process.env.db_username ;
