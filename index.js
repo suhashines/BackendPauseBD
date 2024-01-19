@@ -13,11 +13,11 @@ const chartRouter = require('./router/chartRouter')
 const headerRouter = require('./router/headerRouter')
 const footerRouter = require('./router/footerRouter')
 
-// const port = 5000 ;
+const port = 5000 ;
 
-// app.listen(port,()=>{
-//     console.log('server is running at port ',port)
-// })
+app.listen(port,()=>{
+    console.log('server is running at port ',port)
+})
 
 
 app.use('/product',productRouter)
@@ -29,5 +29,5 @@ app.use('/header',headerRouter)
 app.use('/footer',footerRouter);
 
 app.use('/',(req,res)=>{
-    res.json({"hello": "world"});
+    res.send('Welcome to the server home page');
 })
