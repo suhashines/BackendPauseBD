@@ -27,3 +27,7 @@ app.use('/admin',adminRouter);
 app.use('/chart',chartRouter);
 app.use('/header',headerRouter)
 app.use('/footer',footerRouter);
+
+app.use('/',(req,res)=>{
+    res.json({"hello": "world"});
+})
