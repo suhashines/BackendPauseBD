@@ -20,13 +20,13 @@ app.listen(port,"0.0.0.0",()=>{
 })
 
 
-app.use('/api/product',productRouter)
-app.use('/api/collection',collectionRouter);
-app.use('/api/order',orderRouter)
-app.use('/api/admin',adminRouter);
-app.use('/api/chart',chartRouter);
-app.use('/api/header',headerRouter)
-app.use('/api/footer',footerRouter);
+app.use('/product',productRouter)
+app.use('/collection',collectionRouter);
+app.use('/order',orderRouter)
+app.use('/admin',adminRouter);
+app.use('/chart',chartRouter);
+app.use('/header',headerRouter)
+app.use('/footer',footerRouter);
 
 app.get('/',(req,res)=>{
     res.send('Welcome to the server home page');
