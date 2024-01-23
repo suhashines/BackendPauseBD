@@ -28,6 +28,6 @@ app.use('api/chart',chartRouter);
 app.use('api/header',headerRouter)
 app.use('api/footer',footerRouter);
 
-app.use('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('Welcome to the server home page');
 })

@@ -32,7 +32,9 @@ const collectionSchema = new mongoose.Schema({
   },
   description:String
 
-},{collection:'collections'}) 
+},{collection:'collections'},
+{ suppressReservedKeysWarning: true }
+) 
 
 
 const collections = mongoose.model('collections',collectionSchema)
