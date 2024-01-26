@@ -132,6 +132,9 @@ async function calculateOrder(req, res) {
 async function confirmOrder(req, res) {
   
   const order = req.body ;
+   const date = new Date();
+
+  order.date = date ;
 
   const newOrder = new Pendings(order);
 
@@ -153,7 +156,7 @@ async function confirmOrder(req, res) {
 
   let isSent ;
 
-  isSent = await sendMail(cart.cart,cart.total,email,userIntro,outro);
+   isSent = await sendMail(cart.cart,cart.total,email,userIntro,outro);
 
   if(isSent==0){
     return res.json({sucess:false,msg:"An error occured while sending the mail. Please contact us via phone"});

@@ -45,10 +45,6 @@ const pendingSchema = new mongoose.Schema({
   },
   date: {
     type:Date,
-    default: function(){
-      date = new Date();
-      return date;
-    }
   },
 
   cart: [
