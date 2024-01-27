@@ -32,7 +32,7 @@ async function getProductById(req, res) {
 
 async function getProductByCollection(req, res) {
   const collectionId = req.query.id;
-
+  console.log("You insied getProductByCollection")
   console.log("got id: " + collectionId);
 
   const products = await Products.find({ collection: collectionId });
