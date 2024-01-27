@@ -12,7 +12,8 @@ const {
   editProduct,
   deleteProduct,
   getProductWiseIncome,
-  selectColor
+  selectColor,
+  getPendingOrderById
 } = require("../controller/adminController");
 
 adminRouter.route("/signup").post(signup);
@@ -22,6 +23,8 @@ adminRouter.route("/login").post(login);
 adminRouter.route("/edit/:id").patch(editAccount);
 
 adminRouter.route("/order/pending").get(getPendingOrders);
+
+adminRouter.route("/order/pending/:id").get(getPendingOrderById);
 
 adminRouter.route("/order/confirm/:id").patch(confirmOrder);
 

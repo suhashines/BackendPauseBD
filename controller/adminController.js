@@ -268,6 +268,14 @@ async function getPendingOrders(req, res) {
   return res.json({ pendings });
 }
 
+async function getPendingOrderById(req,res){
+    const orderId = req.params.id ;
+
+    const pending = await Pending.findById(orderId);
+
+    return res.json({ pending });
+}
+
 async function signup(req, res) {
   const { email, password } = req.body;
 
@@ -363,5 +371,6 @@ module.exports = {
   editProduct,
   deleteProduct,
   getProductWiseIncome,
-  selectColor
+  selectColor,
+  getPendingOrderById
 };
