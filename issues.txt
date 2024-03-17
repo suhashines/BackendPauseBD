@@ -1,0 +1,39 @@
+same name product: 
+
+latest collection should come first
+add to cart box instead of + sign
+product box er price sizing, font, opacity
+collection's banner image size should fit 16:9
+pause logo on the top-middle
+
+
+Phone issues: 
+
+pause logo will be small
+three bar animation: all transitions will be from bottom to top
+arrows will be small
+two products per width 
+message button will be placed bottom right
+
+Product details:
+
+font size will be small in product details page
+colors will appear beside color label
+box border_color: black, a little space between front image and image carousal
+sort options: Alphabet(A-Z) , latest will be excluded
+horizontal line will be removed
+tagline at the top should not be stopped
+logo image can be changed from admin's end
+backImage field will be non-required
+image logos will be placed at the bottom
+in Stock: 20 will be removed
+description went under the black-box
+
+
+Footer: 
+
+box size will be small
+2022 Pause will be hardcoded
+facebook, tiktok
+
+fonts: bold

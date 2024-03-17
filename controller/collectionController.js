@@ -80,6 +80,7 @@ async function getBestCollection(req, res) {
 
 async function getAllCollection(req, res) {
   const collections = await Collections.find();
+  collections.sort((a, b) => new Date(b.date) - new Date(a.date));
   res.json({ collections });
 }
 

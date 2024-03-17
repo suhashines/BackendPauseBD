@@ -4,7 +4,8 @@ const headerSchema = new mongoose.Schema({
     header1 : String ,
     header2:  String ,
     header3 : String ,
-    header4 : String
+    header4 : String,
+    logo: String
 },{collection:'headers'}) ;
 
 const Headers = mongoose.model('headers',headerSchema);
