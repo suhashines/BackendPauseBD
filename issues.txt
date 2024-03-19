@@ -1,6 +1,6 @@
 same name product: 
 
-latest collection should come first
+latest collection should come first 
 add to cart box instead of + sign
 product box er price sizing, font, opacity
 collection's banner image size should fit 16:9

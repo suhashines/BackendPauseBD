@@ -4,7 +4,7 @@ const footerSchema = new mongoose.Schema({
     email: String, 
     phone: String,
     facebook : String ,
-    twitter : String,
+    tiktok : String,
     instagram : String
 },{collection:'footers'});
 
