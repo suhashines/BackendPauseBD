@@ -275,19 +275,6 @@ async function getPendingOrderById(req,res){
 
     const pending = await Pending.findById(orderId).populate('cart.id', 'name');
 
-  //   const populatedCart = await Promise.all(pending.cart.map(async (item) => {
-  //     const product = await Product.findById(item.id);
-  //     //console.log(product);
-  //     return {
-  //         ...item.toObject(),
-  //         name: product.name // Include product name in the cart item
-  //     };
-  // }));
-
-  //    console.log("population" ,populatedCart) ;
-
-  // Replace cart with populatedCart containing product names
-
     console.log("pending",pending);
 
     return res.json({ pending });
