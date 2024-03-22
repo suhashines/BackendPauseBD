@@ -259,7 +259,7 @@ async function confirmOrder(req, res) {
 
 async function getPendingOrders(req, res) {
   
-  const pendings = await Pending.find({ isDelivered: false }).populate('cart.id', 'name');;
+  const pendings = await Pending.find({ isDelivered: false }).populate('cart.id', 'name');
 
   // but before sending the pending orders, I want to add name attribute to the cart field which
   // will contain the name of the product ( by searching the product by its id from the Products Schema)
@@ -269,9 +269,26 @@ async function getPendingOrders(req, res) {
 }
 
 async function getPendingOrderById(req,res){
-    const orderId = req.params.id ;
 
-    const pending = await Pending.findById(orderId);
+    const orderId = req.params.id ;
+    console.log("hmm I see");
+
+    const pending = await Pending.findById(orderId).populate('cart.id', 'name');
+
+  //   const populatedCart = await Promise.all(pending.cart.map(async (item) => {
+  //     const product = await Product.findById(item.id);
+  //     //console.log(product);
+  //     return {
+  //         ...item.toObject(),
+  //         name: product.name // Include product name in the cart item
+  //     };
+  // }));
+
+  //    console.log("population" ,populatedCart) ;
+
+  // Replace cart with populatedCart containing product names
+
+    console.log("pending",pending);
 
     return res.json({ pending });
 }
