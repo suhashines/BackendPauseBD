@@ -1,0 +1,24 @@
+meta {
+  name: create-new-collection
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE}}/collection
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"sisimpur collection",
+    "portrait":["halum.jpg"],
+    "landscape":[]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

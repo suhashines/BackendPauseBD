@@ -1,0 +1,79 @@
+meta {
+  name: add-new-product
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{BASE}}/product
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Hey Bro",
+    "category": "{{category-id}}",
+    "collection": "{{collection-id}}",
+    "colors": [
+      {
+        "name": "blue",
+        "sizes": [
+          {
+            "size": "S",
+            "inStock": 10
+          },
+          {
+            "size": "M",
+            "inStock": 15
+          },
+          {
+            "size": "L",
+            "inStock": 8
+          }
+        ],
+        "frontImage": [
+          "https://lonelyghost.co/cdn/shop/products/navydailyhd.001.jpg?v=1681775976&width=800"
+        ],
+        "backImage": [
+          "https://lonelyghost.co/cdn/shop/products/navydailyhd.002.jpg?v=1695593807&width=800"
+        ]
+      },
+      {
+        "name": "brown",
+        "sizes": [
+          {
+            "size": "S",
+            "inStock": 10
+          },
+          {
+            "size": "M",
+            "inStock": 15
+          },
+          {
+            "size": "L",
+            "inStock": 8
+          }
+        ],
+        "frontImage": [
+  "https://lonelyghost.co/cdn/shop/files/Dailys-hoodie-brown-front.png?v=1695594314&width=800",
+  "https://lonelyghost.co/cdn/shop/products/2023-03-03-Look-2_001.jpg?v=1695594314&width=800"
+        ],
+        "backImage": [
+  "https://lonelyghost.co/cdn/shop/products/2023-03-03-Look-2_004.jpg?v=1695594314&width=800"
+        ]
+      }
+    ],
+    "thumbnail":
+  "https://lonelyghost.co/cdn/shop/products/navydailyhd.001.jpg?v=1681775976&width=800",
+    "description": "Your perfect fit",
+    "price": 29.99,
+    "discount": 5,
+    "type": "Graphic"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

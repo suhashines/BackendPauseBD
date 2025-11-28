@@ -4,11 +4,11 @@ const categorySchema = new mongoose.Schema({
     name : {
         type : String ,
         required : true,
-        unique : true
+        unique : true 
 
     }
 } ,
-{collection:'categories'}
+{collection:'categories'} 
 )
 
 const categories = mongoose.model('categories',categorySchema)

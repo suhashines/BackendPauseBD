@@ -47,7 +47,11 @@ async function getProductByColor(req, res) {
 
   let product = await Products.findOne({ _id: id });
 
+  console.log("got product ", product);
+
   let images = await product.colors.find((c) => c.name === color);
+
+  console.log("got images ", images);
 
   return res.json({ front: images.frontImage, back: images.backImage });
 }
@@ -327,7 +331,7 @@ async function filtersbyCategory(req, res) {
 }
 
 async function search(req, res) {
-  const { name } = req.body;
+  const { name } = req.query;
 
   try {
     const allProducts = await Products.find();

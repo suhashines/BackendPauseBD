@@ -1,0 +1,16 @@
+meta {
+  name: get-all-available-colors-across-all-products
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{BASE}}/product/all/color
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

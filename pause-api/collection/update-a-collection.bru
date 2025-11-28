@@ -1,0 +1,30 @@
+meta {
+  name: update-a-collection
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE}}/collection?id=6929c0f43bbc175ce932df19
+  body: json
+  auth: inherit
+}
+
+params:query {
+  id: 6929c0f43bbc175ce932df19
+}
+
+body:json {
+  {
+    "name": "updated sisimpur collection",
+    "portrait": [
+      "halum.jpg"
+    ],
+    "landscape": []
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

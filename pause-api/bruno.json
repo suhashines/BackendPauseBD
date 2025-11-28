@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "pause-api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

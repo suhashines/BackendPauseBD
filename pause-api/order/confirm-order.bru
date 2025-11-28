@@ -1,0 +1,44 @@
+meta {
+  name: confirm-order
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE}}/order/confirm
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Abdullah Bro",
+    "phone": "01625285922",
+    "email": "suhasabdullah43@gmail.com",
+    "inDhaka": true,
+    "thana": "Jatrabari",
+    "road": "Shahid Faruque",
+    "building": "90/3, hasnahena lane",
+    "transactionId": "8979438492387",
+    "otherDetails":"some other details",
+    "cart": [
+      {
+        "id": "{{product-id}}",
+        "size": "S",
+        "color": "DARKBLUE",
+        "quantity": 3
+      },
+      {
+        "id": "{{product-id}}",
+        "size": "S",
+        "color": "PINK",
+        "quantity": 3
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

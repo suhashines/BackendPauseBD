@@ -1,0 +1,35 @@
+meta {
+  name: calculate-total-price-of-a-cart
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE}}/order/calculate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "cart": [
+      {
+        "id": "{{product-id}}",
+        "size": "M",
+        "color": "DARKBLUE",
+        "quantity": 3
+      },
+      {
+        "id": "{{product-id}}",
+        "size": "S",
+        "color": "PINK",
+        "quantity": 3
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

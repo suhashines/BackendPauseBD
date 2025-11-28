@@ -1,0 +1,20 @@
+meta {
+  name: delete-a-collection
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{BASE}}/collection?id=6929c0f43bbc175ce932df19
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: 6929c0f43bbc175ce932df19
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

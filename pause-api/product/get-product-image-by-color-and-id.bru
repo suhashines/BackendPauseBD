@@ -1,0 +1,21 @@
+meta {
+  name: get-product-image-by-color-and-id
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{BASE}}/product/color?id={{product-id}}&color={{product-color}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  id: {{product-id}}
+  color: {{product-color}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

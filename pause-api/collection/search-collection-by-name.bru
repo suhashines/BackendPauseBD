@@ -1,0 +1,20 @@
+meta {
+  name: search-collection-by-name
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{BASE}}/collection/search?name="loneliness"
+  body: json
+  auth: inherit
+}
+
+params:query {
+  name: "loneliness"
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

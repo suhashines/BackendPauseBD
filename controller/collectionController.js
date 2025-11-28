@@ -57,7 +57,7 @@ function searchUtil(array, name) {
 async function search(req, res) {
 
   try {
-    const {name} = req.body ;
+    const {name} = req.query ;
 
     console.log("got name "+name);
     // Find all collections
@@ -74,7 +74,7 @@ async function search(req, res) {
 
 async function getBestCollection(req, res) {
   const collections = await Collections.find();
-  collections.sort((a, b) => b.order - a.order);
+  collections.sort((a, b) => b.order - a.order); 
   res.json(collections[0]);
 }
 
@@ -83,7 +83,7 @@ async function getAllCollection(req, res) {
   collections.sort((a, b) => new Date(b.date) - new Date(a.date));
   res.json({ collections });
 }
-
+ 
 async function getLatestCollection(req, res) {
   const collections = await Collections.find();
   collections.sort((a, b) => new Date(b.date) - new Date(a.date));

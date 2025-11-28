@@ -1,0 +1,54 @@
+meta {
+  name: filter-by-size-color-and-sort
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{BASE}}/product/filter
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "sizes":["S","M"],
+    "colors":["BLACK"],
+    "sort":"best"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  Filters by sizes intersection colors and then sort by choosing an option. 
+  
+  Suppose you send a request with the following body,
+  
+  ```json
+  {
+    "sizes":["S","M"],
+    "colors":["BLACK","PURPLE"],
+    "sort":"date"
+  }
+  ```
+  
+  The endpoint will fetch the product that is either black or purple and available in either S or M sizes and then sort the result by date.
+  
+  if no sizes or colors is selected then pass empty array like this,
+  
+  ```json
+  "sizes":[],
+  "colors":[]
+  ```
+  
+  `sort options`: Only these values are valid
+  - alphabet
+  - date
+  - best : sorts according to best seller
+  - price
+  
+}

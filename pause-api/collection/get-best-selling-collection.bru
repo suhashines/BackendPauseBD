@@ -1,0 +1,16 @@
+meta {
+  name: get-best-selling-collection
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{BASE}}/collection/best
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
